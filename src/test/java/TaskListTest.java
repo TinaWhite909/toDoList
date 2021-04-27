@@ -15,7 +15,10 @@ public class TaskListTest {
         taskList = new TaskList();
         Task task1=new Task(LocalDate.of(2021,4,23),LocalDate.of(2022,2,12),"task1");
         Task task2=new Task(LocalDate.of(2021,4,23),LocalDate.of(2022,2,12),"task1");
-        
+        Task task3=new Task(LocalDate.of(2021,4,23),LocalDate.of(2022,2,12),"task1");
+        Task task4=new Task(LocalDate.of(2021,4,23),LocalDate.of(2022,2,12),"task1");
+        Task task5=new Task(LocalDate.of(2021,4,23),LocalDate.of(2022,2,12),"task1");
+
     }
 
     @After
