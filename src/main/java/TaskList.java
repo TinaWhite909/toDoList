@@ -6,20 +6,13 @@ public class TaskList {
 
     private List<Task> list = new ArrayList<>();
 
-    public void addDescription(Task task) {
-        if (isCorrect(task)) {
+    public void addTask(Task task) {
+        if (task.getFinishDate() != null && task.getTaskDescription() != null) {
             list.add(task);
         }
-        else {
-            throw new IllegalArgumentException("Значения не могут быть null");
-        }
     }
 
-    public boolean isCorrect(Task task){
-        return task.getFinishDate()!=null && task.getTaskDescription()!=null;
-    }
-
-    public void removeDescription(Task task) {
+    public void removeTask(Task task) {
         list.remove(task);
     }
 
@@ -33,13 +26,16 @@ public class TaskList {
         return taskByDate;
     }
 
+    public int returnSizeList() {
+        return getAllTasks().size();
+    }
+
     public List<Task> getAllTasks() {
-       List<Task> newList = new ArrayList<>(list);
+        List<Task> newList = new ArrayList<>(list);
         newList.sort(new FinishDateComparator());
 
         return newList;
     }
-
 
 
 }
