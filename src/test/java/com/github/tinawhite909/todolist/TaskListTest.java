@@ -1,3 +1,6 @@
+package com.github.tinawhite909.todolist;
+
+import com.github.tinawhite909.todolist.bean.Task;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,6 +15,8 @@ public class TaskListTest {
 
     @Before
     public void setUp() throws Exception {
+
+
         taskList = new TaskList();
         Task task1 = new Task(LocalDate.of(2021, 4, 23), LocalDate.of(2022, 2, 12), "task1");
         Task task2 = new Task(LocalDate.of(2021, 4, 23), LocalDate.of(2022, 3, 12), "task2");

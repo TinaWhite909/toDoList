@@ -1,3 +1,7 @@
+package com.github.tinawhite909.todolist.comparator;
+
+import com.github.tinawhite909.todolist.bean.Task;
+
 import java.util.Comparator;
 
 public class FinishDateComparator implements Comparator<Task> {
