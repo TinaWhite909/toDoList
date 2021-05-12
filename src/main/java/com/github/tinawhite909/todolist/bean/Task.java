@@ -1,5 +1,6 @@
 package com.github.tinawhite909.todolist.bean;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 public class Task {

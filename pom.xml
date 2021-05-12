@@ -43,6 +43,11 @@
             <version>2.11.1</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-joda</artifactId>
+            <version>2.9.7</version>
+        </dependency>
     </dependencies>
 
 

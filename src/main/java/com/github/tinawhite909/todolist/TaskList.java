@@ -3,6 +3,7 @@ package com.github.tinawhite909.todolist;
 import com.github.tinawhite909.todolist.bean.Task;
 import com.github.tinawhite909.todolist.comparator.FinishDateComparator;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +42,4 @@ public class TaskList {
 
         return newList;
     }
-
-
 }
