@@ -59,6 +59,7 @@ public class Task {
 
     @Override
     public String toString() {
+        // TODO do you really need this long package here
         return "com.github.tinawhite909.todolist.bean.Task{" +
                 "startDate=" + startDate +
                 ", finishDate=" + finishDate +

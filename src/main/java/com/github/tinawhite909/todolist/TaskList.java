@@ -32,6 +32,7 @@ public class TaskList {
         return taskByDate;
     }
 
+    // TODO make method name shorter, possible 'size' is enough
     public int returnSizeList() {
         return list.size();
     }
