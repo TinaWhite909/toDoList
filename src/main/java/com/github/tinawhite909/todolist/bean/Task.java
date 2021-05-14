@@ -1,6 +1,5 @@
 package com.github.tinawhite909.todolist.bean;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 
 public class Task {
@@ -59,7 +58,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return "com.github.tinawhite909.todolist.bean.Task{" +
+        return "Task{" +
                 "startDate=" + startDate +
                 ", finishDate=" + finishDate +
                 ", taskDescription='" + taskDescription + '\'' +

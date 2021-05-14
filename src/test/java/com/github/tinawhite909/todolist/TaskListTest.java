@@ -16,7 +16,6 @@ public class TaskListTest {
     @Before
     public void setUp() throws Exception {
 
-
         taskList = new TaskList();
         Task task1 = new Task(LocalDate.of(2021, 4, 23), LocalDate.of(2022, 2, 12), "task1");
         Task task2 = new Task(LocalDate.of(2021, 4, 23), LocalDate.of(2022, 3, 12), "task2");
@@ -36,28 +35,28 @@ public class TaskListTest {
     @Test
     public void shouldAddTaskToEmptyList() {
         Task task3 = new Task(LocalDate.of(2021, 4, 23), LocalDate.of(2022, 2, 12), "task3");
-        assertEquals(0, taskList.returnSizeList());
+        assertEquals(0, taskList.size());
         taskList.addTask(task3);
-        assertEquals(1, taskList.returnSizeList());
+        assertEquals(1, taskList.size());
     }
 
     @Test
     public void shouldAddWrongTask() {
         Task task4 = new Task(LocalDate.of(2021, 3, 20), null, "task4");
         Task task41 = new Task(LocalDate.of(2021, 3, 20), LocalDate.of(2022, 2, 12), null);
-        assertEquals(0, taskList.returnSizeList());
+        assertEquals(0, taskList.size());
         taskList.addTask(task4);
         taskList.addTask(task41);
 
-        assertEquals(0, taskList.returnSizeList());
+        assertEquals(0, taskList.size());
     }
 
     @Test
     public void shouldRemoveTask() {
-        assertEquals(4, compliedTaskList.returnSizeList());
+        assertEquals(4, compliedTaskList.size());
         Task task1 = new Task(LocalDate.of(2021, 4, 23), LocalDate.of(2022, 2, 12), "task1");
         compliedTaskList.removeTask(task1);
-        assertEquals(3, compliedTaskList.returnSizeList());
+        assertEquals(3, compliedTaskList.size());
     }
 
     @Test
