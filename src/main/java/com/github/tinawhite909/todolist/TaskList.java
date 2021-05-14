@@ -9,7 +9,15 @@ import java.util.List;
 
 public class TaskList {
 
-    private List<Task> list = new ArrayList<>();
+    private final List<Task> list;
+
+    public TaskList(List<Task> list) {
+        this.list = new ArrayList<>(list);
+    }
+
+    public TaskList() {
+        list = new ArrayList<>();
+    }
 
     public void addTask(Task task) {
         if (task.getFinishDate() != null && task.getTaskDescription() != null) {
