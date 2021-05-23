@@ -19,6 +19,7 @@ import java.util.Scanner;
 public class TaskFileManager {
     private final static Logger LOGGER = LoggerFactory.getLogger(TaskFileManager.class);
     private final String filename;
+    private  final String dataFormat = "dd/MM/yyyy";
 
     public TaskFileManager(String filename) {
         this.filename = filename;
@@ -70,13 +71,13 @@ public class TaskFileManager {
     }
 
     private String getStringDateFormat(LocalDate startDate) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(dataFormat);
         String simpleDate = startDate.format(formatter);
         return simpleDate;
     }
 
     private LocalDate getDateFormat(String simpleDate) throws ParseException {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat(dataFormat);
         Date date = sdf.parse(simpleDate);
         LocalDate lDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
         return lDate;
